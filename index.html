@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>My To-Do List</h1>
+
+    <div class="task-entry">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button id="addBtn">+ Add</button>
+      <button id="clearBtn" title="Clear all tasks for the selected date">🗑️ Clear</button>
+    </div>
+
+    <div id="taskListInfo" class="no-tasks">No tasks for this date.</div>
+    <ul id="taskList"></ul>
+
+    <div id="calendarHeader"></div>
+    <div id="calendar" class="calendar"></div>
+
+    <!-- Options panel BELOW the calendar -->
+    <div class="options-panel">
+      <label>
+        <input type="checkbox" id="toggleCompleted" checked />
+        Show Completed Tasks
+      </label>
+      <button id="viewAllBtn">📋 View All Tasks</button>
+    </div>
+  </div>
+
+  <!-- All Tasks Modal -->
+  <div id="allTasksModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>📅 All Tasks</h3>
+      <ul id="allTasksList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
